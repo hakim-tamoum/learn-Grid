@@ -53,6 +53,7 @@ section .image-grid .img{
 	grid-gap: 10px;
     height: 825px;
     overflow: hidden;
+    position: relative;
 }
 section .image-grid img{
 	width: 100%;
