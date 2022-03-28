@@ -62,7 +62,7 @@ section .image-grid img{
     
 }
 section .image-grid img:hover{
-	filter: opacity(0.8);
+	filter: opacity(0);
 	transition: .2s;
 	cursor: pointer;
 }
