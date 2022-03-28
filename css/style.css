@@ -66,6 +66,31 @@ section .image-grid img:hover{
 	transition: .2s;
 	cursor: pointer;
 }
+.child{
+	grid-column-start: 3; 
+	grid-column-end: 5;
+	grid-row-start: 2;
+	z-index: 3;
+}
+.mg{opacity: 0;}
+.child img{
+	width: 100%;
+	object-fit: cover;
+    box-shadow: 4px 5px 3px #444;
+}
+.child1{
+	grid-column-start: 3; 
+	grid-column-end: 5;
+	grid-row-start: 2;
+	z-index: 2;
+}
+.child1 img{
+	width: 100%;
+	object-fit: cover;
+    box-shadow: 4px 5px 3px #444;
+	
+}
+
 section .image-grid img:nth-child(1){
 	grid-row: span 0;
 	grid-column: span 2;
