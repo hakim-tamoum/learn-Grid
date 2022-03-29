@@ -197,22 +197,64 @@ aside{
 	grid-area: gridSection;
 	background-color: #07f;
 }
-.grid-section .item{
+.grid-section .item1{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 50px);
 	grid-gap: 15px;
 	padding: 15px;
+	margin-bottom: 50px;
 	border: 2px solid #000;
 }
-.grid-section .item div{
+.grid-section .item1 div{
 	background-color: #444;
 	border: 2px solid #f00;
 }
-.grid-section .item .ab{
+.grid-section .item1 .ab{
 	grid-column-start: 2;
 	grid-row-start: 2;
 	background-color: #fac;
+}
+.grid-section .item2{
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(6, 50px);
+	border: 2px solid #000;
+}
+.grid-section .item2 div{
+	border: 2px solid rgb(0, 255, 64);
+}
+.grid-section .item2 div:nth-child(1){
+	grid-column-start: 1;
+	grid-column-end: span 5;
+	grid-row-start: 4;
+	grid-row-end: span 1;
+	background-color: #000;
+	z-index: 3;
+}
+.grid-section .item2 div:nth-child(2){
+	grid-column-start: 3;
+	grid-column-end:span 3;
+	grid-row-start: 1;
+	grid-row-end: 6;
+	background-color: #addd29;
+	z-index: 2;
+}
+.grid-section .item2 div:nth-child(3){
+	grid-column-start: 1;
+	grid-column-end: span 6;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	background-color: #e62f2f;
+	z-index: 1;
+}
+.grid-section .item2 div:nth-child(4){
+	grid-column-start: 1;
+	grid-column-end: span 8;
+	grid-row-start: 1;
+	grid-row-end: 7;
+	background-color: #18e718;
+	z-index: 0;
 }
 
 /*  footer */
