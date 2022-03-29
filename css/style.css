@@ -1,8 +1,13 @@
-*{box-sizing: border-box; margin: 0; padding: 0;}
+*{
+	box-sizing: border-box;
+	margin: 0; 
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
 .page{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 50px 1rf 1fr 50px;
+    grid-template-rows: 70px 1rf 1fr 70px;
     grid-template-areas: 
     "logo logo nav nav nav nav nav nav nav nav"
     "cont cont cont cont cont cont cont cont side side"
@@ -12,43 +17,58 @@
 /* logo  */
 h2{
     grid-area: logo;
-    background-color: #f00;
+    background-color: #383b35;
     padding: 10px;
     text-align: center;
+	color: #fff;
+	letter-spacing: 2px;
 }
+
 /* nav  */
 nav{
     grid-area: nav;
-    background-color: #ff0;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr) ;	
+	grid-template-columns: repeat(2, 1fr) ;
+    background-color: #383b35;;
+	color: #fff;	
 }
 ul{ 
 	list-style: none;
 	grid-column: 2;
 	display: flex;
 	justify-content: end;
+	margin-right: 20px;
 }
 li{
     display: inline-block; 
     margin-right:15px ;
     padding-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 /* section */
 section{
     grid-area: cont;
-    background-color: #f0f;
+	position: relative;
 }
 section .image-grid{
-    height: 900px;
     position: relative;
     padding: 20px;
+	
 }
 section .image-grid h1{
     text-align: center;
     padding: 10px;
+	margin:0 300px 20px;
+	border-bottom: 3px solid #333;
+}
+span{
+	font-weight: bolder; 
+	color: #e983d8; 
+	font-family: tahoma;
+	text-shadow: 2px 2px 2px #000;
+	text-transform: uppercase;
+	letter-spacing: 4px;
 }
 section .image-grid .img{
     display: grid;
@@ -56,8 +76,8 @@ section .image-grid .img{
     grid-auto-flow: dense;
 	grid-gap: 10px;
     height: 825px;
-    overflow: hidden;
     position: relative;
+	
 }
 section .image-grid img{
 	width: 100%;
@@ -194,9 +214,13 @@ section .image-grid img:nth-child(24){
 /* aside */
 aside{
     grid-area: side;
-    background-color: #00f;
+    background-color: rgb(132, 132, 218);
 }
-
+p{
+	background-color: #ddd;
+	border: 1px solid #000;
+	margin: 30px 5px;
+}
 /* section 2 */
 .grid-section{
 	grid-area: gridSection;
