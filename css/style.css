@@ -256,6 +256,15 @@ aside{
 	background-color: #18e718;
 	z-index: 0;
 }
+.grid-section .item2 div:nth-child(5){
+	grid-column-start: 7;
+	grid-column-end: 8;
+	grid-row-start: 3;
+	grid-row-end: span 3;
+	background-color: rgb(219, 95, 12);
+	z-index: 4;
+	border-radius: 50%;
+}
 
 /*  footer */
 footer{
