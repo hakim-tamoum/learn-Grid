@@ -1,24 +1,23 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+*{box-sizing: border-box; margin: 0; padding: 0;}
 .page{
-    height: 100vh;
+    
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 50px 900px 40px;
+    grid-template-rows: 50px repeat(2, 1fr) 40px;
     grid-template-areas: 
     "logo logo nav nav nav nav nav nav nav nav"
     "cont cont cont cont cont cont cont cont side side"
+	"gridSection gridSection gridSection gridSection gridSection gridSection gridSection gridSection gridSection gridSection"
     "foot foot foot foot foot foot foot foot foot foot";
 }
+/* logo  */
 h2{
     grid-area: logo;
     background-color: #f00;
     padding: 10px;
     text-align: center;
 }
+/* nav  */
 nav{
     grid-area: nav;
     background-color: #ff0;
@@ -31,10 +30,10 @@ li{
     font-size: 20px;
     font-weight: bold;
 }
+/* section */
 section{
     grid-area: cont;
     background-color: #f0f;
-    position: relative;
 }
 section .image-grid{
     width: 100%;
@@ -62,7 +61,7 @@ section .image-grid img{
     
 }
 section .image-grid img:hover{
-	filter: opacity(0);
+	filter: opacity(.6);
 	transition: .2s;
 	cursor: pointer;
 }
@@ -187,11 +186,36 @@ section .image-grid img:nth-child(24){
 	grid-row: span 0;
 	grid-column: span 2;
 }
-
+/* aside */
 aside{
     grid-area: side;
     background-color: #00f;
 }
+
+/* section 2 */
+.grid-section{
+	grid-area: gridSection;
+	background-color: #07f;
+}
+.grid-section .item{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 50px);
+	grid-gap: 15px;
+	padding: 15px;
+	border: 2px solid #000;
+}
+.grid-section .item div{
+	background-color: #444;
+	border: 2px solid #f00;
+}
+.grid-section .item .ab{
+	grid-column-start: 2;
+	grid-row-start: 2;
+	background-color: #fac;
+}
+
+/*  footer */
 footer{
     grid-area: foot;
     background-color: #0ff;
